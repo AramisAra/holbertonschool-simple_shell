@@ -1,22 +1,21 @@
-#ifndef MAIN_H
-#define MAIN_H
+#ifndef SHELL_H
+#define SHELL_H
 
-/* Dependencies */
 #include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
 #include <unistd.h>
+#include <string.h>
+#include <stdlib.h>
+#include <sys/types.h>
 #include <sys/wait.h>
-#include <stdbool.h>
+#include <sys/stat.h>
 
-/* Global var */
 extern char **environ;
 
-/* This header hold all the prototype */
-void _envp(void);
-bool searchpaths(char *commands, char *Fpath);
-void exe(char *commands);
 
-
+int _printenv(void);
+char *_getenv(char *var);
+char *command_lists(char *cmd);
+int command_read(char *s, size_t __attribute__((unused))file_stream);
+int execute(char *cmd_arr[]);
 
 #endif

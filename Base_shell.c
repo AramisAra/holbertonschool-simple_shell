@@ -1,43 +1,45 @@
 #include "main.h"
 /**
- * main - This is the shell commands
- * return: 0
-*/
-int main(void)
+ * main - command interpreter
+ * @argc: unused
+ * @argv: arguments
+ * Return: 0
+ */
+int main(int __attribute__((unused)) argc, char *argv[])
 {
-	char *buff = NULL;
-	size_t len = 0;
-	ssize_t read_size = 0;
-	int cou = 0;
+	char *input = NULL;
+	size_t size = 0;
+	ssize_t characters = 0;
+	int status = 0;
+	int exitst = 0;
+
 
 	while (1)
 	{
-		if (isatty(fileno(stdin)))
-			printf("AraOS $ ");
-		read_size = getline(&buff, &len, stdin);
-		if (read_size == -1)
-		{
-			free(buff);
-			exit(0);
-		}
-		buff[strcspn(buff, "\n")] = '\0';
-		for (cou = 0; buff[cou] != '\0'; cou++)
-		{
-			if(buff[cou] != ' ')
-				break;
-		}
-		if (strcmp(buff, "exit") == 0)
-		{
-			free(buff);
-			exit(0);
-		}
-		else if (strcmp(buff, "env") == 0)
-			_envp();
-		else
-			exe(buff);
-	}
-	free(buff);
-	return (0);
-}
-			
+		if (isatty(STDIN_FILENO) == 1) /* if a fd is a terminal */
+			write(1, "Ara OS$ ", 8); /* write to standard output */
 
+		characters = getline(&input, &size, stdin);
+		if (characters == -1)
+		{
+			if (isatty(STDIN_FILENO) == 1)
+				write(1, "\n", 1);
+			break;
+		}
+
+		if (input[characters - 1]  == '\n') /* when '\n', write '\0' */
+			input[characters - 1]  = '\0';
+		if (*input == '\0')
+			continue;
+		if (command_read(input, characters) == 2) /* in case of exit */
+			break;
+	}
+
+	free(input);
+	input = NULL;
+
+	exitst = WEXITSTATUS(status);
+
+	return (exitst);
+
+}
