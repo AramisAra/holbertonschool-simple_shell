@@ -1,5 +1,8 @@
 #include "main.h"
-
+/**
+ * execmd - executes command in the shell
+ * @cmd: pointer to command to be executed
+ */
 
 void execmd(char *cmd)
 {
