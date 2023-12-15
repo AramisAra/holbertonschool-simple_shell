@@ -5,7 +5,9 @@
 #include <stdlib.h>
 #include <string.h>
 #include <unistd.h>
+#include <sys/types.h>
+#include <sys/wait.h>
 
 /**prototypes**/
-int main(int ac, char **argv);
+void execmd(char *cmd);
 #endif

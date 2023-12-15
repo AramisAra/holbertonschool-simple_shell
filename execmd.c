@@ -1,17 +1,21 @@
 #include "main.h"
 
 
-void execmd(char **argv)
+void execmd(char *cmd)
 {
-	char *command = NULL;
+	pid_t pid = fork();
 
-	if (argv)
+	if (pid == -1)
 	{
-		command = argv[0];
-
-		if (execve(command, argv, NULL) == -1)
-		{
-			perror("Error:");
-		};
+		perror("Error:fork");
+		exit(EXIT_FAILURE);
 	}
+	if (pid == 0)
+	{
+		execlp(cmd, cmd, (char *)NULL);
+		fprintf(stderr, "Command: %s not found\n", cmd);
+		exit(EXIT_FAILURE);
+	}
+	else
+		wait(NULL);
 }
