@@ -70,7 +70,7 @@ int _printenv(void)
 
 /**
  * command_read - function that reads the command
- * @input: the input command
+ * @input: the input of the shell
  * @characters: unused
  * Return: command execution
  */
@@ -82,7 +82,7 @@ int command_read(char *input, size_t __attribute__((unused))characters)
 
 	if (strcmp(input, "exit") == 0)
 	{
-		write(1, "\n Bye and thank you for the use \n\n", 17);
+		write(1, "\n Bye and thank you for the use \n\n", 35);
 		return (2);
 	}
 	if (strcmp(input, "env") == 0)
@@ -106,17 +106,15 @@ int command_read(char *input, size_t __attribute__((unused))characters)
 
 /**
  * execute - function that executes the command
- * @cmd_arr: command
+ * @cmd_arr: This commands lists
  * Return: 0
  */
 int execute(char *cmd_arr[])
 {
-	char *exe_path = NULL;
-	char *cmd = NULL;
+	char *exe_path = NULL, *cmd = NULL;
 	pid_t pid;
-	int status;
-	int exit_st = 0;
-
+	int status, exit_st = 0;
+	
 	cmd = cmd_arr[0];
 	exe_path = command_lists(cmd);
 	if (exe_path == NULL)

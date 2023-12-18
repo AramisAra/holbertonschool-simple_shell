@@ -16,8 +16,8 @@ int main(int __attribute__((unused)) argc, char *argv[])
 
 	while (1)
 	{
-		if (isatty(STDIN_FILENO) == 1) /* if a fd is a terminal */
-			write(1, "Ara OS$ ", 8); /* write to standard output */
+		if (isatty(STDIN_FILENO) == 1)
+			write(1, "Ara OS$ ", 8);
 
 		characters = getline(&input, &size, stdin);
 		if (characters == -1)
@@ -27,11 +27,11 @@ int main(int __attribute__((unused)) argc, char *argv[])
 			break;
 		}
 
-		if (input[characters - 1]  == '\n') /* when '\n', write '\0' */
+		if (input[characters - 1]  == '\n')
 			input[characters - 1]  = '\0';
 		if (*input == '\0')
 			continue;
-		if (command_read(input, characters) == 2) /* in case of exit */
+		if (command_read(input, characters) == 2)
 			break;
 	}
 
