@@ -28,7 +28,7 @@ int _strcmp(char *comp, char *com)
 */
 int _strncmp(char *com,  char *comp, size_t c)
 {
-	while (n && *com && (*com == *comp))
+	while (c && *com && (*com == *comp))
 	{
 		++com;
 		++comp;
