@@ -80,7 +80,6 @@ int execution(char **tokens,  char **env)
 	else
 		wait(&status);
 	free_array(tokens);
-	free_array(cmd);
 	return (1);
 }
 /**
