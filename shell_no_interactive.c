@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * shell_no_interactive - UNIC command line interpreter
+ * shell_no_interactive - UNIX command line interpreter
  *
  * Return: void
  */
