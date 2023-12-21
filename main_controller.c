@@ -1,11 +1,9 @@
 #include "main.h"
 /**
  * main - it runs the main shell loop
- *
  * @ac: unused argument count
  * @av: argument vector
- * @env: enviorment
- *
+ * @env: env variables
  * Return: always return 0.
  */
 int main(int ac __attribute__((unused)), char **av,  char **env)
@@ -54,9 +52,7 @@ int main(int ac __attribute__((unused)), char **av,  char **env)
 
 /**
  * input_control - function that will check if tokens 0 is the word exit
- *
  * @tokens: array of tokens that we will checked only the first token
- *
  * Return: 1, if the word is not exit, or 0 if it exit
  */
 int input_control(char **tokens)

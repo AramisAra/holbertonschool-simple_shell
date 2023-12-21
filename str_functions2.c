@@ -1,9 +1,6 @@
 #include "main.h"
 /**
- * _strcat - This function appendes the src to the dest string,
- * overwritingh the termination null byte at the end of dest,
- * and then adds a termination null byte.
- *
+ * _strcat - It concatenates two strings
  * @dest: original
  * @src: to be added to dest
  *
@@ -33,20 +30,18 @@ char *_strcat(char *dest, char *src)
 	return (dest);
 }
 /**
- * _strlen - Return the lenght of a string
- *
- * @s: charater pointer
- *
- * Return: the lenght of the string
+ * _strlen - Return the length of a string
+ * @s: string to be evaluated
+ * Return: the length of the string
  */
 int _strlen(char *s)
 {
-	int lenght;
+	int len;
 
-	for (lenght = 0; s[lenght] != '\0'; lenght++)
+	for (len = 0; s[len] != '\0'; len++)
 		;
 
-	return (lenght);
+	return (len);
 }
 /**
  * _strdup - Duplicates a given string
@@ -57,12 +52,10 @@ char *_strdup(char *s)
 {
 	char *ptr;
 	int i, len = 0;
-
 	if (s == NULL)
 		return (NULL);
 
 	len = _strlen(s);
-
 	ptr = malloc(sizeof(char) * (len + 1));
 
 	if (ptr == NULL)
@@ -70,7 +63,6 @@ char *_strdup(char *s)
 
 	for (i = 0; i < len; i++)
 		ptr[i] = s[i];
-
 	ptr[i] = '\0';
 
 	return (ptr);

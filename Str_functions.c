@@ -1,9 +1,8 @@
 #include "main.h"
 /**
  * _strcmp - compare two strings
- *
- * @comparing: source string
- * @compare: string to be compare againt source.
+ * @comp: source string
+ * @com: string to be compare againt source.
  *
  * Return: 0 if its equal, otherwise is not equal.
  */
@@ -21,8 +20,8 @@ int _strcmp(char *comp, char *com)
 /**
  * _strncmp - Compares two strings with n size
  *
- * @compare: Given String 1
- * @comparing: Given String 2
+ * @com: Given String 1
+ * @comp: Given String 2
  * @c: Size to character compare
  * Return: 0 both strings are equals
 */
@@ -42,11 +41,9 @@ int _strncmp(char *com,  char *comp, size_t c)
 }
 /**
  * _strcpy - Copies the string pointed to by src
- *
- * @dest: destination
- * @src: source
- *
- * Return: Return the value of the pointer dest
+ * @dest: copy
+ * @src: origin
+ * Return: Return the copy of the string
  */
 char *_strcpy(char *dest, char *src)
 {

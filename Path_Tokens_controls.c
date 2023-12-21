@@ -109,10 +109,8 @@ char *add_path(char **tokens, char **path_tok)
 }
 /**
  * tokenization - extract tokens from the getline command
- *
  * @ptr: String of the command line
- * @delim: Delimiter
- *
+ * @delim: Delimiter to tokenize the string
  * Return: the array of tokens
  */
 char **tokenization(char *ptr, char *delim)
