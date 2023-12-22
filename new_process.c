@@ -16,7 +16,7 @@ int new_process(char **args)
 	{
 		if (execvp(args[0], args) == -1)
 	{
-		fprintf(stderr,"./hsh: 1: ls: not found";
+		fprintf(stderr,"./hsh: 1: ls: not found");
 	}
 	exit(status);
 	}
