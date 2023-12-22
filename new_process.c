@@ -27,7 +27,7 @@ int new_process(char **args)
 	else
 	{
 		do {
-			waitpid(pid, &status, WUNTRACED);
+			waitpid(pid, &status, WEXITSTATUS(status));
 		} while (!WIFEXITED(status) && !WIFSIGNALED(status));
 	}
 	return (-1);
