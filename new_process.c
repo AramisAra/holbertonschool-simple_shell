@@ -16,7 +16,7 @@ int new_process(char **args)
 	{
 		if (execvp(args[0], args) == -1)
 	{
-		perror("error in new_process: child process\n");
+		perror("./hsh: 1: ls: not found\n");
 	}
 	exit(EXIT_FAILURE);
 	}

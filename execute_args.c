@@ -40,7 +40,7 @@ int execute_args(char **args)
 
 	if (args[0] == NULL)
 	{
-		return (-1);
+		return (-3);
 	}
 	for (; i < num_builtins(); i++)
 	{
