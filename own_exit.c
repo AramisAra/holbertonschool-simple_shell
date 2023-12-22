@@ -10,10 +10,10 @@ int own_exit(char **args)
 {
 	if (args[1])
 	{
-		exit(atoi(args[1]));
+		exit(EXIT_FAILURE);
 	}
 	else
 	{
-		return (0);
+		return (EXIT_SUCCESS);
 	}
 }
