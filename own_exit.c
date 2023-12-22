@@ -8,10 +8,12 @@
  */
 int own_exit(char **args)
 {
+	char *status;
+
 	if (args[0] == NULL)
 	{
 		exit(EXIT_FAILURE);
-		printf("%c\n", *args[0]);
+		*status = *args[0];
 	}
 	else
 	{
