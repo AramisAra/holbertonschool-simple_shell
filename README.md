@@ -12,13 +12,13 @@ To carry out this project, the c language was used.
 |, Name | Description |
 | ------------------------------ | -------------------------------------------- |
 | AUTHORS | Contributors in this repository.|
-| ,man_1_simple_shell | Manual of simple_shell. |
+| man_1_simple_shell | Manual of simple_shell. |
 | shell.h | Header file program. |
 | main.c | Main function, interactive and non-interactive. |
-| n,ew_procees.c | Function that creates a new process. |
+| new_procees.c | Function that creates a new process. |
 | own_cd.c | Change the working directory. |
 | own_env.c | Function that prints environment variables. |
-| ow,,,,n_exit.c | Exit shell with a given state. |
+| own_exit.c | Exit shell with a given state. |
 | own_help.c | Function that prints help (get information about a command) |
 | read_line.c | Read a line from stdin. |
 | read_stream.c | Read a line from the stream. |

@@ -12,7 +12,7 @@ void shell_interactive(void)
 	int status = -1;
 
 	do {
-		printf("Farishell $ ");
+		printf("SimpleShell $ ");
 		line = read_line();
 		args = split_line(line);
 		status = execute_args(args);
