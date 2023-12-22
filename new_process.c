@@ -18,7 +18,7 @@ int new_process(char **args)
 	{
 		perror("./hsh: 1: ls: not found\n");
 	}
-	exit(EXIT_FAILURE);
+	exit(status);
 	}
 	else if (pid < 0)
 	{
