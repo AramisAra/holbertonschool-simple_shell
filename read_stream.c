@@ -19,7 +19,7 @@ char *read_stream(void)
 	}
 	while (1)
 	{
-		character = getchar(); /* read first char from stream */
+		character = getchar();
 		if (character == EOF)
 		{
 			free(line);

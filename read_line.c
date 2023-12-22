@@ -10,16 +10,16 @@ char *read_line(void)
 	char *line = NULL;
 	size_t bufsize = 0;
 
-	if (getline(&line, &bufsize, stdin) == -1) /* if getline fails */
+	if (getline(&line, &bufsize, stdin) == -1)
 	{
-		if (feof(stdin)) /* test for the eof */
+		if (feof(stdin))
 		{
-			free(line); /* avoid memory leaks when ctrl + d */
-			exit(EXIT_SUCCESS); /* we recieved an eof */
+			free(line);
+			exit(EXIT_SUCCESS);
 		}
 		else
 		{
-			free(line); /* avoid memory leaks when getline fails */
+			free(line);
 			perror("error in read_line: getline");
 			exit(EXIT_FAILURE);
 		}

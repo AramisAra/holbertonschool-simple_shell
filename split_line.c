@@ -21,7 +21,6 @@ char **split_line(char *line)
 	token = strtok(line, TOK_DELIM);
 	while (token != NULL)
 	{
-		/* handle comments */
 		if (token[0] == '#')
 		{
 			break;

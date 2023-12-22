@@ -19,7 +19,7 @@ void shell_no_interactive(void)
 		free(line);
 		free(args);
 
-		if (status <= 0)
+		if (status >= 0)
 		{
 			exit(status);
 		}
