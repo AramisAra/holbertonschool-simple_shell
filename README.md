@@ -1,4 +1,4 @@
-# Simple Shell: Fari style
+# Simple Shell:$ 
 
 ## Description
 
@@ -110,3 +110,4 @@ farimain~/holbertonschool-simple-shellpwd
  ```
 ## Author
 [Jose C Rivera](https://github.com/Fariviriski)
+[Aramis Martinez}(https://github.com/AramisAra)

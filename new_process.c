@@ -15,10 +15,10 @@ int new_process(char **args)
 	if (pid == 0)
 	{
 		if (execvp(args[0], args) == -1)
-	{
-		fprintf(stderr,"./hsh: 1: ls: not found\n");
-	}
-	exit(EXIT_FAILURE);
+		{
+			fprintf(stderr,"./hsh: 1: ls: not found\n");
+		}
+			exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)
 	{

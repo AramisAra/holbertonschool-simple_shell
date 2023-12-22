@@ -8,7 +8,7 @@
  */
 int own_exit(char **args)
 {
-	if (args[1])
+	if (args[0] == NULL)
 	{
 		exit(EXIT_FAILURE);
 	}
