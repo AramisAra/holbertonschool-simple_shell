@@ -14,11 +14,11 @@ int new_process(char **args)
 	pid = fork();
 	if (pid == 0)
 	{
-		if (execvp(args[0], args) == '\n')
+		if (execvp(args[0], args) == -1)
 	{
 		fprintf(stderr,"./hsh: 1: ls: not found\n");
 	}
-	exit(status);
+	exit(EXIT_FAILURE);
 	}
 	else if (pid < 0)
 	{
