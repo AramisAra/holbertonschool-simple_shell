@@ -109,5 +109,5 @@ farimain~/holbertonschool-simple-shellpwd
 /home/fari/holbertonschool-simple_shell
  ```
 ## Author
-[Jose C Rivera](https://github.com/Fariviriski)
-[Aramis Martinez}(https://github.com/AramisAra)
+-[Jose C Rivera](https://github.com/Fariviriski)
+-[Aramis Martinez}(https://github.com/AramisAra)
