@@ -14,7 +14,7 @@ int new_process(char **args)
 	pid = fork();
 	if (pid == 0)
 	{
-		if (execvp(args[0], args) == -1)
+		if (execvp(args[0], args) <= 0)
 		{
 			fprintf(stderr, "./hsh: 1: ls: not found\n");
 		}
