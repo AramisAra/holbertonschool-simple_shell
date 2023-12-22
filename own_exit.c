@@ -8,9 +8,9 @@
  */
 int own_exit(char **args)
 {
-	if (args[0])
+	if (args[1])
 	{
-		exit(2);
+		exit(atoi(args[1]));
 	}
 	else
 	{
